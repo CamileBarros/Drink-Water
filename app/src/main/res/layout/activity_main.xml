@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/bgHeader"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/background_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:layout_width="149dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/drinkwater"
+        app:layout_constraintStart_toStartOf="@id/bgHeader"
+        app:layout_constraintTop_toTopOf="@id/bgHeader" />
+
+    <ImageView
+        android:id="@+id/icRefresh"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_refresh"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@id/bgHeader"
+        app:layout_constraintEnd_toEndOf="@id/bgHeader"/>
+
+    <EditText
+        android:id="@+id/scrnPound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_pound"
+        android:textColorHint="@color/blue_300"
+        android:padding="15dp"
+        android:textColor="@color/blue_300"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="numberDecimal"
+        android:maxLength="7"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bgHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/scrnAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_age"
+        android:textColorHint="@color/blue_300"
+        android:padding="15dp"
+        android:textColor="@color/blue_300"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:maxLength="3"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/bgHeader"
+        app:layout_constraintStart_toEndOf="@id/scrnPound"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btCalcule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_calcule"
+        android:textSize="18sp"
+        style="bold"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:background="@drawable/backgroud_button"
+        android:layout_margin="20dp"
+        app:layout_constraintTop_toBottomOf="@id/scrnPound"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/scrnResult"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/background_result"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintTop_toBottomOf="@id/btCalcule"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="36sp"
+        android:textColor="@color/blue_300"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/scrnResult"
+        app:layout_constraintStart_toStartOf="@id/scrnResult"
+        app:layout_constraintEnd_toEndOf="@id/scrnResult"
+        app:layout_constraintBottom_toBottomOf="@id/scrnResult"/>
+    
+    <Button
+        android:id="@+id/btRemember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_remember"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/blue_200"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/scrnResult"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_button_clock"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:backgroundTint="@color/blue_200"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrnResult"/>
+
+    <TextView
+        android:id="@+id/textHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_hour"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="136dp"
+        app:layout_constraintTop_toBottomOf="@id/btRemember"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/textColon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_colon"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btRemember"
+        app:layout_constraintStart_toEndOf="@id/textHour"/>
+    <TextView
+        android:id="@+id/textMinutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_minutes"
+        android:textSize="36sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintTop_toBottomOf="@id/btRemember"
+        app:layout_constraintStart_toEndOf="@id/textColon"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

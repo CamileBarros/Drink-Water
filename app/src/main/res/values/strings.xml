@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Beba água</string>
+    <string name="hint_pound">Seu peso (Kg)</string>
+    <string name="hint_age">Sua idade</string>
+    <string name="text_button_calcule">Calcular quantidade diária</string>
+    <string name="text_button_remember">Lembrete</string>
+    <string name="text_button_clock">Alarme</string>
+    <string name="text_hour">00</string>
+    <string name="text_colon">:</string>
+    <string name="text_minutes">00</string>
+    <string name="toast_age">Informe sua idade</string>
+    <string name="toast_pound">Informe seu peso</string>
+    <string name="dialog_title">Redefinir dados</string>
+    <string name="dialog_description">Deseja excluir todos os dados existentes?</string>
+    <string name="message_alarm">Hora de beber água!</string>
+</resources>

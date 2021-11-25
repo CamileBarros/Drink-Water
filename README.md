@@ -1,6 +1,7 @@
 # Beba água
 ---
 App to calculate the amount of water to be ingested per day with reminder and alarm.
+Video-based study app: https://www.youtube.com/watch?v=PFOJo8T4VIk&t=924s
 ---
 App Video
 
